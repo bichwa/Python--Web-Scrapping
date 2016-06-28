@@ -4,8 +4,14 @@
 
 import urllib.request
 
-urls = ["http://google.com","cnn.com","bean.co.ke"]
+urls = ["http://google.com","http://cnn.com","http://bean.co.ke"]
 
-htmltext = urllib.request.urlopen("http://google.com").read()
+i =0
+while i < len(urls):
+	htmlfile = urllib.request.urlopen(urls[i])
+	htmltext = htmlfile.read()
 
-print (htmltext)
+	print (htmltext)
+	i+=1
+
+
